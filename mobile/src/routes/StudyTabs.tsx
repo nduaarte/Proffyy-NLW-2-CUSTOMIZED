@@ -1,9 +1,10 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import TeacherList from '../pages/TeacherList';
 import Favorites from '../pages/Favorites';
+import Stats from '../pages/Stats';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -48,6 +49,14 @@ function StudyTabs(){
         tabBarIcon: ({ color, size, focused }) => {
           return (
             <Ionicons name="ios-heart" size={size} color={focused ? '#8256e5' : color} />
+          )
+        }
+      }}/>
+      <Screen name="Stats" component={Stats} options={{
+        tabBarLabel: 'Progresso',
+        tabBarIcon: ({ color, size, focused }) => {
+          return (
+            <MaterialCommunityIcons name="progress-check" size={size} color={focused ? '#8256e5' : color} />
           )
         }
       }}/>

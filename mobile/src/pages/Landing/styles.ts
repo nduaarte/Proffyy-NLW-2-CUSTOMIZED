@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import theme from '../../themes/theme'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#8257E5',
+    backgroundColor: theme.purple,
     justifyContent: 'center',
     padding: 40,
   },
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
 
   title: {
     fontFamily: 'Poppins_400Regular',
-    color: '#FFF',
+    color: '#e0e0e0',
     fontSize: 20,
     lineHeight: 30,
     marginTop: 80,
@@ -40,16 +41,16 @@ const styles = StyleSheet.create({
   },
 
   buttonPrimary: {
-    backgroundColor: '#9871f5'
+    backgroundColor: '#6449a6'
   },
 
   buttonSecondary: {
-    backgroundColor: '#04d361'
+    backgroundColor: '#279c5b'
   },
 
   buttonText: {
     fontFamily: 'Archivo_700Bold',
-    color: '#FFF',
+    color: '#e0e0e0',
     fontSize: 20,
   },
 
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     maxWidth: 140,
     marginTop: 40,
-  }
+  },
 
 });
 

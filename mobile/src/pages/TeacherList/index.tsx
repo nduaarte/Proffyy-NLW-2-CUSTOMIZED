@@ -8,7 +8,7 @@ import PageHeader from '../../components/PageHeader';
 import TeacherItem, { Teacher } from '../../components/TeacherItem';
 import TeacherEmpty from '../../components/TeacherEmpty';
 
-import api from '../../services/api';
+import api from '../../services';
 
 import styles from './styles';
 import { useFocusEffect } from '@react-navigation/native';
