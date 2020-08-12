@@ -40,11 +40,11 @@ const styles = StyleSheet.create({
   },
 
   buttonPrimary: {
-    backgroundColor: '#6449a6'
+    backgroundColor: '#9871f5'
   },
 
   buttonSecondary: {
-    backgroundColor: '#279c5b'
+    backgroundColor: '#19bd62'
   },
 
   buttonText: {
