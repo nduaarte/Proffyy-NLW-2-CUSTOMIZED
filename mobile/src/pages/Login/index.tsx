@@ -1,26 +1,39 @@
 import React from 'react';
-import { View, Text, Image, ImageBackground, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, ImageBackground, TextInput, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 
 import styles from './styles';
 
 import Img from '../../assets/images/give-classes-background.png';
-import Logo from '../../assets/images/logo.png';
 
 export default function Login() {
   return(
-    <ImageBackground style={styles.container} resizeMode='center' source={Img} >
-      <Image style={styles.logo} source={Logo} />
-      <Text>Sua plataforma de {'\n'} estudos online.</Text>
+    <KeyboardAvoidingView style={styles.container} behavior='height'>
+      <ImageBackground style={styles.bannerContainer} resizeMode='center' source={Img}>
+        <Text style={styles.logo}>
+          Proffy {'\n'}
+          <Text style={styles.description}>Sua plataforma de {'\n'}estudos online.</Text>
+        </Text>
+      </ImageBackground>
 
       <View style={styles.loginContainer}>
-        <Text style={styles.textLogin}>Login</Text>
-        <TextInput style={styles.input} />
-        <TextInput style={styles.input} />
+        <View style={styles.row}>
+          <Text style={styles.textLogin}>Fazer Login</Text>
+          <TouchableOpacity>
+            <Text style={styles.buttonCreateAccText}>Criar uma conta</Text>
+          </TouchableOpacity>
+        </View>
+
+        <TextInput style={styles.input} placeholder='email' />
+        <TextInput style={styles.input} placeholder='senha' />
 
         <TouchableOpacity style={styles.buttonEnter}>
           <Text style={styles.buttonEnterText}>Entrar</Text>
         </TouchableOpacity>
+        
+        <TouchableOpacity>
+          <Text style={styles.buttonForgotPasswordText}>Esqueci minha senha</Text>
+        </TouchableOpacity>
       </View>
-    </ImageBackground>
+    </KeyboardAvoidingView>
   );
 }
